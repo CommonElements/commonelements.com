@@ -1,22 +1,25 @@
 import type { Metadata } from "next";
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://commonelements.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://commonelements.com";
 
 interface CreateMetadataOptions {
   title: string;
   description: string;
-  path?: string;
-  noIndex?: boolean;
+  path: string;
+  ogType?: "website" | "article";
+  publishedTime?: string;
+  tags?: string[];
 }
 
 export function createMetadata({
   title,
   description,
-  path = "",
-  noIndex = false,
+  path,
+  ogType = "website",
+  publishedTime,
+  tags,
 }: CreateMetadataOptions): Metadata {
-  const url = `${SITE_URL}${path}`;
+  const url = `${BASE_URL}${path}`;
 
   return {
     title,
@@ -26,12 +29,15 @@ export function createMetadata({
       title,
       description,
       url,
-      type: "website",
+      type: ogType,
+      siteName: "Common Elements Insurance",
+      ...(publishedTime && { publishedTime }),
+      ...(tags && { tags }),
     },
     twitter: {
+      card: "summary_large_image",
       title,
       description,
     },
-    ...(noIndex && { robots: { index: false, follow: false } }),
   };
 }

@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import {
+  OrganizationJsonLd,
+  WebSiteJsonLd,
+} from "@/components/shared/json-ld";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -24,6 +28,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Common Elements Insurance",
+    images: [
+      {
+        url: "/og?title=Common+Elements+Insurance&subtitle=Specialty+Insurance+for+Community+Associations",
+        width: 1200,
+        height: 630,
+        alt: "Common Elements Insurance",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -42,6 +54,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jakarta.variable} font-sans antialiased`}>
+        <OrganizationJsonLd />
+        <WebSiteJsonLd />
         <Header />
         <main>{children}</main>
         <Footer />

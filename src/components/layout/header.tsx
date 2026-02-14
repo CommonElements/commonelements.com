@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -158,25 +159,58 @@ function DesktopDropdown({
   items: readonly { label: string; href: string }[];
   pathname: string;
 }) {
+  const [open, setOpen] = useState(false);
   const isActive = items.some((item) => pathname.startsWith(item.href));
+  const closeTimer = React.useRef<ReturnType<typeof setTimeout>>(null);
+
+  const handleOpen = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpen(true);
+  };
+  const handleClose = () => {
+    closeTimer.current = setTimeout(() => setOpen(false), 150);
+  };
 
   return (
-    <div className="group relative">
+    <div
+      className="relative"
+      onMouseEnter={handleOpen}
+      onMouseLeave={handleClose}
+    >
       <button
+        aria-expanded={open}
+        aria-haspopup="true"
+        onFocus={handleOpen}
+        onBlur={handleClose}
+        onClick={() => setOpen((prev) => !prev)}
         className={cn(
           "flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-navy",
           isActive ? "text-navy" : "text-muted-foreground"
         )}
       >
         {label}
-        <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
+        <ChevronDown
+          className={cn(
+            "h-3.5 w-3.5 transition-transform",
+            open && "rotate-180"
+          )}
+        />
       </button>
-      <div className="invisible absolute left-0 top-full z-50 pt-2 opacity-0 transition-all group-hover:visible group-hover:opacity-100">
+      <div
+        className={cn(
+          "absolute left-0 top-full z-50 pt-2 transition-all",
+          open
+            ? "visible opacity-100"
+            : "invisible opacity-0 pointer-events-none"
+        )}
+      >
         <div className="min-w-[220px] rounded-lg border bg-white p-2 shadow-lg">
           {items.map((item) => (
             <Link
               key={item.href}
               href={item.href}
+              onFocus={handleOpen}
+              onBlur={handleClose}
               className={cn(
                 "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-muted",
                 pathname === item.href

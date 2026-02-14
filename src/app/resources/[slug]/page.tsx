@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllSlugs, getPostBySlug } from "@/lib/blog";
 import { mdxComponents } from "@/components/blog/mdx-components";
 import { CtaBanner } from "@/components/shared/cta-banner";
+import { BlogPostingJsonLd } from "@/components/shared/json-ld";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 
 interface Props {
@@ -20,9 +21,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return {};
 
+  const BASE_URL =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://commonelements.com";
+
   return {
     title: post.frontmatter.title,
     description: post.frontmatter.description,
+    alternates: { canonical: `${BASE_URL}/resources/${slug}` },
+    openGraph: {
+      title: post.frontmatter.title,
+      description: post.frontmatter.description,
+      type: "article",
+      publishedTime: post.frontmatter.date,
+      authors: [post.frontmatter.author],
+      images: [
+        {
+          url: `/og?title=${encodeURIComponent(post.frontmatter.title)}&subtitle=${encodeURIComponent("Common Elements Insurance — Resources")}`,
+          width: 1200,
+          height: 630,
+          alt: post.frontmatter.title,
+        },
+      ],
+    },
   };
 }
 
@@ -39,6 +59,14 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <BlogPostingJsonLd
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        slug={slug}
+        datePublished={post.frontmatter.date}
+        author={post.frontmatter.author}
+      />
+
       {/* Hero */}
       <section className="bg-navy py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
