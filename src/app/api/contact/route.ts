@@ -40,7 +40,7 @@ export async function POST(request: Request) {
       html: `
         <h2>Thanks for reaching out, ${data.name}!</h2>
         <p>We've received your message and will get back to you within one business day.</p>
-        <p>Best,<br/>Harry Schoeller<br/>Common Elements Insurance</p>
+        <p>Best,<br/>The Common Elements Team</p>
       `,
     });
 

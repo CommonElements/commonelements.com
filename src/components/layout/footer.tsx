@@ -26,7 +26,7 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-sm font-semibold text-blue">Quick Links</h4>
+            <h2 className="text-sm font-semibold text-blue">Quick Links</h2>
             <nav className="mt-3 flex flex-col gap-2">
               {FOOTER_LINKS.map((link) => (
                 <Link
@@ -42,7 +42,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold text-blue">Contact</h4>
+            <h2 className="text-sm font-semibold text-blue">Contact</h2>
             <div className="mt-3 flex flex-col gap-2 text-sm text-muted-foreground">
               <a
                 href={`mailto:${COMPANY_INFO.email}`}

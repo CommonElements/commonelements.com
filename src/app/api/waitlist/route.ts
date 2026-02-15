@@ -45,7 +45,7 @@ export async function POST(request: Request) {
         <p>Thank you for your interest in Common Elements Insurance. We're building a specialty agency focused exclusively on community association coverage across the Gulf Coast.</p>
         <p>When we officially launch, you'll be among the first to receive a <strong>complimentary coverage review</strong> — a full analysis of your current insurance program with gap identification and market comparison.</p>
         <p>In the meantime, check out our <a href="https://commonelements.com/resources">educational resources</a> for articles on community association insurance.</p>
-        <p>Best,<br/>Harry Schoeller<br/>Common Elements Insurance</p>
+        <p>Best,<br/>The Common Elements Team</p>
       `,
     });
 

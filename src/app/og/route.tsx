@@ -18,18 +18,33 @@ export async function GET(request: NextRequest) {
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "#1B2A4A",
+          backgroundColor: "#0063CE",
           padding: "60px",
           fontFamily: "system-ui, sans-serif",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
+        {/* Subtle gradient overlay */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background:
+              "radial-gradient(ellipse at top right, rgba(51,135,216,0.3) 0%, transparent 60%)",
+          }}
+        />
+
         {/* Top accent bar */}
         <div
           style={{
             display: "flex",
             width: "120px",
             height: "4px",
-            backgroundColor: "#C5943A",
+            backgroundColor: "#FF8A00",
             marginBottom: "40px",
           }}
         />
@@ -46,7 +61,7 @@ export async function GET(request: NextRequest) {
           <div
             style={{
               fontSize: title.length > 60 ? 40 : 52,
-              fontWeight: 700,
+              fontWeight: 800,
               color: "#FFFFFF",
               lineHeight: 1.2,
               maxWidth: "900px",
@@ -58,7 +73,7 @@ export async function GET(request: NextRequest) {
             <div
               style={{
                 fontSize: 24,
-                color: "#C5943A",
+                color: "#FFA133",
                 marginTop: "20px",
                 lineHeight: 1.4,
               }}
@@ -83,22 +98,22 @@ export async function GET(request: NextRequest) {
               gap: "12px",
             }}
           >
-            {/* Shield icon placeholder */}
             <div
               style={{
-                width: "36px",
-                height: "36px",
+                width: "40px",
+                height: "40px",
                 backgroundColor: "#2A9D8F",
-                borderRadius: "6px",
+                borderRadius: "8px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: "20px",
+                fontSize: "16px",
                 color: "#FFFFFF",
-                fontWeight: 700,
+                fontWeight: 800,
+                letterSpacing: "-0.5px",
               }}
             >
-              CE
+              CEI
             </div>
             <div style={{ fontSize: 20, color: "#FAFAF8", fontWeight: 600 }}>
               Common Elements

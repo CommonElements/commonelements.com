@@ -109,6 +109,8 @@ export function WaitlistSection() {
             className="absolute -left-[9999px] h-0 w-0 opacity-0"
             tabIndex={-1}
             autoComplete="off"
+            aria-hidden="true"
+            aria-label="Leave this field empty"
           />
 
           <div className="grid gap-4 sm:grid-cols-2">
@@ -149,7 +151,7 @@ export function WaitlistSection() {
                 Your Role *
               </Label>
               <Select onValueChange={(v) => setValue("role", v as WaitlistFormData["role"])}>
-                <SelectTrigger className="border-white/20 bg-white/10 text-white">
+                <SelectTrigger className="border-white/20 bg-white/10 text-white" aria-label="Select your role">
                   <SelectValue placeholder="Select your role" />
                 </SelectTrigger>
                 <SelectContent>
@@ -169,7 +171,7 @@ export function WaitlistSection() {
                 State *
               </Label>
               <Select onValueChange={(v) => setValue("state", v as WaitlistFormData["state"])}>
-                <SelectTrigger className="border-white/20 bg-white/10 text-white">
+                <SelectTrigger className="border-white/20 bg-white/10 text-white" aria-label="Select state">
                   <SelectValue placeholder="Select state" />
                 </SelectTrigger>
                 <SelectContent>
