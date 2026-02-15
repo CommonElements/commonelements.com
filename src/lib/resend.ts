@@ -16,4 +16,9 @@ export function getResend() {
 export const NOTIFICATION_EMAIL =
   process.env.CONTACT_EMAIL || "harry@commonelements.com";
 
-export const FROM_EMAIL = "Common Elements <hello@commonelements.com>";
+// Use custom domain if RESEND_FROM_EMAIL is set, otherwise fall back to Resend's default
+// Once commonelements.com is verified on Resend, set RESEND_FROM_EMAIL=hello@commonelements.com
+export const FROM_EMAIL =
+  process.env.RESEND_FROM_EMAIL
+    ? `Common Elements <${process.env.RESEND_FROM_EMAIL}>`
+    : "Common Elements <onboarding@resend.dev>";
