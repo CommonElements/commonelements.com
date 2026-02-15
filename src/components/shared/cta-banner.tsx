@@ -16,8 +16,10 @@ export function CtaBanner({
   ctaHref = "/waitlist",
 }: CtaBannerProps) {
   return (
-    <section className="bg-navy py-16 text-white md:py-20">
-      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-blue py-16 text-white md:py-20">
+      {/* Subtle pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-light/15 via-transparent to-transparent" />
+      <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <h2 className="text-3xl font-semibold text-white md:text-4xl">
           {headline}
         </h2>
@@ -27,7 +29,7 @@ export function CtaBanner({
         <Button
           asChild
           size="lg"
-          className="mt-8 bg-gold text-white hover:bg-gold-dark"
+          className="mt-8 bg-orange text-white shadow-lg shadow-orange/25 transition-all hover:bg-orange-dark hover:shadow-xl hover:shadow-orange/30"
         >
           <Link href={ctaHref}>
             {ctaLabel}

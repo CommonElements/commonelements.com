@@ -10,7 +10,7 @@ export default function PrivacyPage() {
   return (
     <section className="py-12 md:py-16">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-navy md:text-4xl">
+        <h1 className="text-3xl font-bold text-blue md:text-4xl">
           Privacy Policy
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
 
         <div className="mt-8 space-y-8 text-base leading-relaxed text-muted-foreground">
           <div>
-            <h2 className="text-lg font-semibold text-navy">Who we are</h2>
+            <h2 className="text-lg font-semibold text-blue">Who we are</h2>
             <p className="mt-2">
               Common Elements (&ldquo;we,&rdquo; &ldquo;us,&rdquo;
               &ldquo;our&rdquo;) operates the website commonelements.com. This
@@ -29,7 +29,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-navy">
+            <h2 className="text-lg font-semibold text-blue">
               What we collect
             </h2>
             <p className="mt-2">
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-navy">
+            <h2 className="text-lg font-semibold text-blue">
               How we use your information
             </h2>
             <ul className="mt-2 list-disc space-y-1 pl-5">
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-navy">
+            <h2 className="text-lg font-semibold text-blue">
               What we don&rsquo;t do
             </h2>
             <ul className="mt-2 list-disc space-y-1 pl-5">
@@ -89,7 +89,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-navy">
+            <h2 className="text-lg font-semibold text-blue">
               Email communications
             </h2>
             <p className="mt-2">
@@ -101,7 +101,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-navy">
+            <h2 className="text-lg font-semibold text-blue">
               Data storage and security
             </h2>
             <p className="mt-2">
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-navy">Your rights</h2>
+            <h2 className="text-lg font-semibold text-blue">Your rights</h2>
             <p className="mt-2">
               You can request access to, correction of, or deletion of your
               personal information at any time by emailing us at{" "}
@@ -128,7 +128,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-navy">
+            <h2 className="text-lg font-semibold text-blue">
               Children&rsquo;s privacy
             </h2>
             <p className="mt-2">
@@ -138,7 +138,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-navy">
+            <h2 className="text-lg font-semibold text-blue">
               Changes to this policy
             </h2>
             <p className="mt-2">
@@ -150,7 +150,7 @@ export default function PrivacyPage() {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold text-navy">Contact</h2>
+            <h2 className="text-lg font-semibold text-blue">Contact</h2>
             <p className="mt-2">
               Questions about this privacy policy? Email{" "}
               <a

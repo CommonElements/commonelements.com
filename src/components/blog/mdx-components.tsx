@@ -4,13 +4,13 @@ import Link from "next/link";
 export const mdxComponents: MDXComponents = {
   h2: (props) => (
     <h2
-      className="mt-10 scroll-mt-20 text-2xl font-bold text-navy"
+      className="mt-10 scroll-mt-20 text-2xl font-bold text-blue"
       {...props}
     />
   ),
   h3: (props) => (
     <h3
-      className="mt-8 scroll-mt-20 text-xl font-semibold text-navy"
+      className="mt-8 scroll-mt-20 text-xl font-semibold text-blue"
       {...props}
     />
   ),
@@ -44,7 +44,7 @@ export const mdxComponents: MDXComponents = {
     <div
       className={`my-6 rounded-lg border p-4 text-sm ${
         type === "warning"
-          ? "border-gold/30 bg-gold/5"
+          ? "border-orange/30 bg-orange/5"
           : "border-teal/20 bg-teal/5"
       }`}
     >

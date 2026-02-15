@@ -15,7 +15,7 @@ export function CoveragePageLayout({
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy py-16 md:py-20">
+      <section className="bg-blue py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/coverage"
@@ -33,7 +33,7 @@ export function CoveragePageLayout({
       {/* Content */}
       <section className="py-12 md:py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <article className="prose prose-lg max-w-none prose-headings:text-navy prose-h2:text-2xl prose-h2:font-semibold prose-h3:text-xl prose-h3:font-medium prose-strong:text-navy prose-a:text-teal prose-a:no-underline hover:prose-a:underline">
+          <article className="prose prose-lg max-w-none prose-headings:text-blue prose-h2:text-2xl prose-h2:font-semibold prose-h3:text-xl prose-h3:font-medium prose-strong:text-blue prose-a:text-teal prose-a:no-underline hover:prose-a:underline">
             {children}
           </article>
         </div>

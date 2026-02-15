@@ -14,7 +14,7 @@ export default function CoverageOverviewPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy py-16 md:py-24">
+      <section className="bg-blue py-16 md:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
             Understanding Your Association&rsquo;s Insurance Program
@@ -53,7 +53,7 @@ export default function CoverageOverviewPage() {
                 className="group rounded-lg border bg-white p-6 transition-all hover:border-teal/30 hover:shadow-md"
               >
                 <type.icon className="h-8 w-8 text-teal" />
-                <h2 className="mt-4 text-lg font-semibold text-navy group-hover:text-teal">
+                <h2 className="mt-4 text-lg font-semibold text-blue group-hover:text-teal">
                   {type.title}
                 </h2>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">

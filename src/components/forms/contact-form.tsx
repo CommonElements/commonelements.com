@@ -57,7 +57,7 @@ export function ContactForm() {
     return (
       <div className="rounded-xl border bg-white p-8 text-center">
         <CheckCircle className="mx-auto h-12 w-12 text-teal" />
-        <h3 className="mt-4 text-xl font-semibold text-navy">Message Sent</h3>
+        <h3 className="mt-4 text-xl font-semibold text-blue">Message Sent</h3>
         <p className="mt-2 text-sm text-muted-foreground">
           Thank you for reaching out. We&rsquo;ll get back to you within one
           business day.
@@ -153,7 +153,7 @@ export function ContactForm() {
         type="submit"
         size="lg"
         disabled={isSubmitting}
-        className="w-full bg-navy text-white hover:bg-navy/90"
+        className="w-full bg-blue text-white hover:bg-blue/90"
       >
         {isSubmitting ? (
           <>

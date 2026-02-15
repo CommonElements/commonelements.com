@@ -5,17 +5,17 @@ export function HowItWorks() {
     <section className="bg-cream py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold text-navy md:text-4xl">
+          <h2 className="text-3xl font-semibold text-blue md:text-4xl">
             Simple. Transparent. Built for Boards.
           </h2>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {HOW_IT_WORKS_STEPS.map((step) => (
             <div key={step.number} className="text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-navy text-lg font-bold text-gold">
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue text-lg font-bold text-orange shadow-md shadow-blue/20">
                 {step.number}
               </div>
-              <h3 className="text-lg font-semibold text-navy">{step.title}</h3>
+              <h3 className="text-lg font-semibold text-blue">{step.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {step.description}
               </p>

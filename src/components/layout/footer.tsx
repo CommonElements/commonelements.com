@@ -11,10 +11,10 @@ export function Footer() {
           {/* Company */}
           <div>
             <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-md bg-navy">
-                <span className="text-sm font-bold text-gold">CE</span>
+              <div className="flex h-9 w-9 items-center justify-center rounded-md bg-blue">
+                <span className="text-xs font-bold text-orange">CEI</span>
               </div>
-              <span className="text-lg font-semibold text-navy">
+              <span className="text-lg font-semibold text-blue">
                 Common Elements
               </span>
             </div>
@@ -26,13 +26,13 @@ export function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-sm font-semibold text-navy">Quick Links</h4>
+            <h4 className="text-sm font-semibold text-blue">Quick Links</h4>
             <nav className="mt-3 flex flex-col gap-2">
               {FOOTER_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-muted-foreground transition-colors hover:text-navy"
+                  className="text-sm text-muted-foreground transition-colors hover:text-blue"
                 >
                   {link.label}
                 </Link>
@@ -42,11 +42,11 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold text-navy">Contact</h4>
+            <h4 className="text-sm font-semibold text-blue">Contact</h4>
             <div className="mt-3 flex flex-col gap-2 text-sm text-muted-foreground">
               <a
                 href={`mailto:${COMPANY_INFO.email}`}
-                className="transition-colors hover:text-navy"
+                className="transition-colors hover:text-blue"
               >
                 {COMPANY_INFO.email}
               </a>

@@ -47,12 +47,12 @@
   --radius-4xl: calc(var(--radius) + 16px);
 
   /* Brand colors as Tailwind utilities */
-  --color-navy: #1B2A4A;
-  --color-navy-light: #2A3D66;
-  --color-navy-dark: #0F1A2E;
-  --color-gold: #C5943A;
-  --color-gold-light: #D4A94F;
-  --color-gold-dark: #A67B2E;
+  --color-blue: #0063CE;
+  --color-blue-light: #3387D8;
+  --color-blue-dark: #004FA5;
+  --color-orange: #FF8A00;
+  --color-orange-light: #FFA133;
+  --color-orange-dark: #E67A00;
   --color-teal: #2A9D8F;
   --color-teal-light: #3AB8A8;
   --color-teal-dark: #1E7A6F;
@@ -63,40 +63,40 @@
 :root {
   --radius: 0.5rem;
 
-  /* CEI Brand — Navy/Gold/Teal palette */
+  /* CEI Brand — Blue/Orange/Teal palette */
   --background: #FAFAF8;
-  --foreground: #1B2A4A;
+  --foreground: #0063CE;
   --card: #FFFFFF;
-  --card-foreground: #1B2A4A;
+  --card-foreground: #1A1A2E;
   --popover: #FFFFFF;
-  --popover-foreground: #1B2A4A;
-  --primary: #1B2A4A;
-  --primary-foreground: #FAFAF8;
-  --secondary: #F3F0EB;
-  --secondary-foreground: #1B2A4A;
-  --muted: #F3F0EB;
+  --popover-foreground: #1A1A2E;
+  --primary: #0063CE;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F0F4F8;
+  --secondary-foreground: #0063CE;
+  --muted: #F0F4F8;
   --muted-foreground: #4A5568;
   --accent: #2A9D8F;
   --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --border: #D1D5DB;
   --input: #D1D5DB;
-  --ring: #2A9D8F;
+  --ring: #0063CE;
 
-  --chart-1: #C5943A;
+  --chart-1: #FF8A00;
   --chart-2: #2A9D8F;
-  --chart-3: #1B2A4A;
-  --chart-4: #D4A94F;
+  --chart-3: #0063CE;
+  --chart-4: #FFA133;
   --chart-5: #3AB8A8;
 
-  --sidebar: #1B2A4A;
-  --sidebar-foreground: #FAFAF8;
-  --sidebar-primary: #C5943A;
+  --sidebar: #0063CE;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #FF8A00;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #2A3D66;
-  --sidebar-accent-foreground: #FAFAF8;
-  --sidebar-border: #2A3D66;
-  --sidebar-ring: #C5943A;
+  --sidebar-accent: #3387D8;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #3387D8;
+  --sidebar-ring: #FF8A00;
 }
 
 @layer base {
@@ -107,7 +107,7 @@
     @apply bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight text-navy;
+    @apply tracking-tight text-blue;
   }
   h1 {
     @apply text-4xl font-bold md:text-5xl lg:text-6xl;

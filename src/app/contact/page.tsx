@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy py-16 md:py-20">
+      <section className="bg-blue py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
             Get in Touch
@@ -35,7 +35,7 @@ export default function ContactPage() {
             {/* Contact Info Sidebar */}
             <div className="space-y-6">
               <div>
-                <div className="flex items-center gap-2 text-navy">
+                <div className="flex items-center gap-2 text-blue">
                   <Mail className="h-5 w-5 text-teal" />
                   <h3 className="font-semibold">Email</h3>
                 </div>
@@ -48,7 +48,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <div className="flex items-center gap-2 text-navy">
+                <div className="flex items-center gap-2 text-blue">
                   <Phone className="h-5 w-5 text-teal" />
                   <h3 className="font-semibold">Phone</h3>
                 </div>
@@ -58,7 +58,7 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <div className="flex items-center gap-2 text-navy">
+                <div className="flex items-center gap-2 text-blue">
                   <MapPin className="h-5 w-5 text-teal" />
                   <h3 className="font-semibold">Location</h3>
                 </div>

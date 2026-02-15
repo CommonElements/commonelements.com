@@ -95,7 +95,7 @@ export const DIFFERENTIATORS = [
     icon: GraduationCap,
     title: "CAM Background",
     description:
-      "Our founder holds an active LCAM license and has managed operations for 600+ community associations across Florida. We\u2019ve sat in your board meetings and watched boards approve budgets based on coverage they didn\u2019t fully understand.",
+      "Our team brings active LCAM licensing and hands-on experience managing operations for 600+ community associations across Florida. We\u2019ve sat in your board meetings and watched boards approve budgets based on coverage they didn\u2019t fully understand.",
   },
   {
     icon: MapPin,

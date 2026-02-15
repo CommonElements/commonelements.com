@@ -12,7 +12,7 @@ export default function WaitlistPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy py-16 md:py-20">
+      <section className="bg-blue py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
             Reserve Your Spot for a Free Coverage Review
@@ -31,7 +31,7 @@ export default function WaitlistPage() {
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           {/* What you'll get */}
           <div className="mb-10 space-y-4">
-            <h2 className="text-xl font-semibold text-navy">
+            <h2 className="text-xl font-semibold text-blue">
               What you&rsquo;ll get
             </h2>
             <p className="text-muted-foreground leading-relaxed">
@@ -40,14 +40,14 @@ export default function WaitlistPage() {
               comparison, and plain-language recommendations your board can
               actually use to make an informed decision.
             </p>
-            <p className="font-medium text-navy">
+            <p className="font-medium text-blue">
               No cost. No obligation. No high-pressure sales pitch.
             </p>
           </div>
 
           {/* Who this is for */}
           <div className="mb-10 space-y-2">
-            <h2 className="text-xl font-semibold text-navy">
+            <h2 className="text-xl font-semibold text-blue">
               Who this is for
             </h2>
             <p className="text-muted-foreground leading-relaxed">

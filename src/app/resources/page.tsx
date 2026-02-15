@@ -15,7 +15,7 @@ export default function ResourcesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-navy py-16 md:py-20">
+      <section className="bg-blue py-16 md:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
             Resources

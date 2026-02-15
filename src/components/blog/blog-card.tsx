@@ -27,7 +27,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
         ))}
       </div>
 
-      <h3 className="mt-3 text-lg font-semibold text-navy group-hover:text-teal transition-colors line-clamp-2">
+      <h3 className="mt-3 text-lg font-semibold text-blue group-hover:text-teal transition-colors line-clamp-2">
         {post.frontmatter.title}
       </h3>
 

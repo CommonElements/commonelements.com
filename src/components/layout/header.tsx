@@ -26,10 +26,10 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-navy">
-            <span className="text-sm font-bold text-gold">CE</span>
+          <div className="flex h-9 w-9 items-center justify-center rounded-md bg-blue">
+            <span className="text-xs font-bold text-orange">CEI</span>
           </div>
-          <span className="text-lg font-semibold text-navy">
+          <span className="text-lg font-semibold text-blue">
             Common Elements
           </span>
         </Link>
@@ -49,9 +49,9 @@ export function Header() {
                 key={item.label}
                 href={item.href}
                 className={cn(
-                  "rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-navy",
+                  "rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-blue",
                   pathname === item.href
-                    ? "text-navy"
+                    ? "text-blue"
                     : "text-muted-foreground"
                 )}
               >
@@ -64,7 +64,7 @@ export function Header() {
         {/* Desktop CTA */}
         <Button
           asChild
-          className="hidden bg-gold text-white hover:bg-gold-dark lg:inline-flex"
+          className="hidden bg-orange text-white hover:bg-orange-dark lg:inline-flex"
         >
           <Link href="/waitlist">
             Join the Waitlist
@@ -81,7 +81,7 @@ export function Header() {
           </SheetTrigger>
           <SheetContent side="right" className="w-80">
             <SheetHeader>
-              <SheetTitle className="text-left text-navy">
+              <SheetTitle className="text-left text-blue">
                 Common Elements
               </SheetTitle>
             </SheetHeader>
@@ -89,7 +89,7 @@ export function Header() {
               {NAV_ITEMS.map((item) =>
                 "children" in item ? (
                   <div key={item.label} className="flex flex-col">
-                    <span className="px-3 py-2 text-sm font-semibold text-navy">
+                    <span className="px-3 py-2 text-sm font-semibold text-blue">
                       {item.label}
                     </span>
                     {item.children.map((child) => (
@@ -99,7 +99,7 @@ export function Header() {
                           className={cn(
                             "rounded-md px-6 py-2 text-sm transition-colors hover:bg-muted",
                             pathname === child.href
-                              ? "font-medium text-navy"
+                              ? "font-medium text-blue"
                               : "text-muted-foreground"
                           )}
                           onClick={() => setMobileOpen(false)}
@@ -116,7 +116,7 @@ export function Header() {
                       className={cn(
                         "rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted",
                         pathname === item.href
-                          ? "text-navy"
+                          ? "text-blue"
                           : "text-muted-foreground"
                       )}
                       onClick={() => setMobileOpen(false)}
@@ -130,7 +130,7 @@ export function Header() {
                 <SheetClose asChild>
                   <Button
                     asChild
-                    className="w-full bg-gold text-white hover:bg-gold-dark"
+                    className="w-full bg-orange text-white hover:bg-orange-dark"
                   >
                     <Link
                       href="/waitlist"
@@ -184,8 +184,8 @@ function DesktopDropdown({
         onBlur={handleClose}
         onClick={() => setOpen((prev) => !prev)}
         className={cn(
-          "flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-navy",
-          isActive ? "text-navy" : "text-muted-foreground"
+          "flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:text-blue",
+          isActive ? "text-blue" : "text-muted-foreground"
         )}
       >
         {label}
@@ -214,8 +214,8 @@ function DesktopDropdown({
               className={cn(
                 "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-muted",
                 pathname === item.href
-                  ? "font-medium text-navy"
-                  : "text-muted-foreground hover:text-navy"
+                  ? "font-medium text-blue"
+                  : "text-muted-foreground hover:text-blue"
               )}
             >
               {item.label}

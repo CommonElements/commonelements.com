@@ -55,7 +55,7 @@ export function WaitlistSection() {
 
   if (submitted) {
     return (
-      <section className="bg-navy py-16 md:py-20">
+      <section className="bg-blue py-16 md:py-20">
         <div className="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:px-8">
           <CheckCircle className="mx-auto h-12 w-12 text-teal" />
           <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
@@ -80,7 +80,7 @@ export function WaitlistSection() {
   }
 
   return (
-    <section className="bg-navy py-16 md:py-20">
+    <section className="bg-blue py-16 md:py-20">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-semibold text-white md:text-4xl">
@@ -93,14 +93,14 @@ export function WaitlistSection() {
             &mdash; a full analysis of your current insurance program with gap
             identification and market comparison.
           </p>
-          <p className="mt-2 text-sm font-medium text-gold">
+          <p className="mt-2 text-sm font-medium text-orange">
             No cost. No obligation. Just clarity.
           </p>
         </div>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="mt-8 space-y-4 rounded-xl bg-white/5 p-6 backdrop-blur-sm"
+          className="mt-8 space-y-4 rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
         >
           {/* Honeypot */}
           <input
@@ -223,7 +223,7 @@ export function WaitlistSection() {
             type="submit"
             size="lg"
             disabled={isSubmitting}
-            className="w-full bg-gold text-white hover:bg-gold-dark"
+            className="w-full bg-orange text-white shadow-lg shadow-orange/25 transition-all hover:bg-orange-dark hover:shadow-xl hover:shadow-orange/30"
           >
             {isSubmitting ? (
               <>

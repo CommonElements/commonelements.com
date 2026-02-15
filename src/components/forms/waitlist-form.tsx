@@ -64,7 +64,7 @@ export function WaitlistForm() {
     return (
       <div className="rounded-xl border bg-white p-8 text-center">
         <CheckCircle className="mx-auto h-12 w-12 text-teal" />
-        <h3 className="mt-4 text-2xl font-semibold text-navy">
+        <h3 className="mt-4 text-2xl font-semibold text-blue">
           You&rsquo;re on the list.
         </h3>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -234,7 +234,7 @@ export function WaitlistForm() {
         type="submit"
         size="lg"
         disabled={isSubmitting}
-        className="w-full bg-gold text-white hover:bg-gold-dark"
+        className="w-full bg-orange text-white hover:bg-orange-dark"
       >
         {isSubmitting ? (
           <>
