@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function UmbrellaExcessPage() {
   return (
-    <CoveragePageLayout title="Umbrella and Excess Liability Insurance: The Coverage Most Associations Don't Carry Enough Of">
+    <CoveragePageLayout slug="umbrella-excess" title="Umbrella and Excess Liability Insurance: The Coverage Most Associations Don't Carry Enough Of">
       <p>
         An umbrella or excess liability policy provides additional coverage
         limits above your underlying{" "}

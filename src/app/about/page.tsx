@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Common Elements Insurance is built by community association professionals with hands-on experience managing 600+ associations. Learn about our team and mission.",
+    "Common Elements Insurance is being built by community association professionals with hands-on experience managing 600+ associations. Learn about our team and mission.",
 };
 
 export default function AboutPage() {
@@ -85,18 +85,18 @@ export default function AboutPage() {
             This Isn&rsquo;t a Side Hustle
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-            Common Elements is being built as a specialty agency &mdash; not a
-            general practice that happens to take on a few association accounts.
-            Every system, every carrier relationship, every piece of content on
-            this site is designed around the specific needs of community
-            associations.
+            Common Elements is being built as a specialty practice &mdash; not
+            a general operation that happens to take on a few association
+            accounts. Every system, every future carrier relationship, every
+            piece of content on this site is designed around the specific needs
+            of community associations.
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-2">
             {[
               {
                 icon: FileCheck,
                 title: "We've read your governing documents.",
-                body: "Not skimmed them — read them. We know what Section 718 requires for condominium insurance. We know what your declarations say about insurance obligations versus what's actually on your dec pages. Most agents don't check. We will.",
+                body: "Not skimmed them — read them. We know what Section 718 requires for condominium insurance. We know what your declarations say about insurance obligations versus what's actually on your dec pages. Most agents don't check. We always will.",
               },
               {
                 icon: Building2,
@@ -110,7 +110,7 @@ export default function AboutPage() {
               },
               {
                 icon: MapPin,
-                title: "We work across the Gulf Coast.",
+                title: "We're preparing to serve the Gulf Coast.",
                 body: "Florida, Georgia, Alabama, Mississippi, and Louisiana. Coastal property insurance requires navigating surplus lines markets, understanding wind/flood layering, and working with carriers who actually want to write in these geographies.",
               },
             ].map((item) => (
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 <h3 className="mt-3 text-base font-semibold text-blue">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted-foreground">
                   {item.body}
                 </p>
               </div>
@@ -191,8 +191,8 @@ export default function AboutPage() {
           <div className="mt-6 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
             <p>
               We believe in being straightforward: Common Elements is in
-              pre-launch. We&rsquo;re in the process of completing our agency
-              registration, finalizing carrier and market access partnerships,
+              pre-launch. We&rsquo;re in the process of completing our
+              licensing, finalizing carrier and market access partnerships,
               and building the infrastructure to serve associations the way they
               deserve to be served.
             </p>

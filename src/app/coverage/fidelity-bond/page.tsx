@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function FidelityBondPage() {
   return (
-    <CoveragePageLayout title="Fidelity Bonds for Community Associations: Florida's Requirement and Why the Amount Matters">
+    <CoveragePageLayout slug="fidelity-bond" title="Fidelity Bonds for Community Associations: Florida's Requirement and Why the Amount Matters">
       <p>
         A fidelity bond (also called employee dishonesty or crime coverage)
         protects association funds against theft, fraud, or dishonesty by

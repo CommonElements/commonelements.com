@@ -2,10 +2,13 @@ import { PAIN_POINTS } from "@/lib/constants";
 
 export function PainPoints() {
   return (
-    <section className="py-16 md:py-20">
+    <section className="bg-white py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold text-blue md:text-4xl">
+          <p className="text-xs font-semibold uppercase tracking-widest text-orange">
+            The Problem
+          </p>
+          <h2 className="mt-2 text-3xl font-semibold text-blue md:text-4xl">
             Your Board Deserves Better Than This
           </h2>
         </div>
@@ -23,7 +26,7 @@ export function PainPoints() {
                 <h3 className="text-lg font-semibold text-blue">
                   {point.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted-foreground">
                   {point.description}
                 </p>
               </div>

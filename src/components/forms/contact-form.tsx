@@ -16,7 +16,9 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { contactSchema, type ContactFormData } from "@/lib/schemas";
 import { CONTACT_SUBJECT_OPTIONS } from "@/lib/constants";
-import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
+import { ArrowRight, CheckCircle, Loader2, AlertCircle } from "lucide-react";
+
+const MESSAGE_MAX = 2000;
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -26,10 +28,13 @@ export function ContactForm() {
     register,
     handleSubmit,
     setValue,
+    watch,
     formState: { errors, isSubmitting },
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
+
+  const messageValue = watch("message") ?? "";
 
   async function onSubmit(data: ContactFormData) {
     setError(null);
@@ -78,6 +83,8 @@ export function ContactForm() {
         className="absolute -left-[9999px] h-0 w-0 opacity-0"
         tabIndex={-1}
         autoComplete="off"
+        aria-hidden="true"
+        aria-label="Leave this field empty"
       />
 
       <div className="grid gap-4 sm:grid-cols-2">
@@ -87,9 +94,13 @@ export function ContactForm() {
             id="c-name"
             {...register("name")}
             placeholder="Jane Smith"
+            aria-invalid={!!errors.name}
+            aria-describedby={errors.name ? "c-name-err" : undefined}
           />
           {errors.name && (
-            <p className="text-xs text-red-500">{errors.name.message}</p>
+            <p id="c-name-err" role="alert" className="text-xs text-red-500">
+              {errors.name.message}
+            </p>
           )}
         </div>
         <div className="space-y-2">
@@ -99,9 +110,13 @@ export function ContactForm() {
             type="email"
             {...register("email")}
             placeholder="jane@example.com"
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? "c-email-err" : undefined}
           />
           {errors.email && (
-            <p className="text-xs text-red-500">{errors.email.message}</p>
+            <p id="c-email-err" role="alert" className="text-xs text-red-500">
+              {errors.email.message}
+            </p>
           )}
         </div>
       </div>
@@ -113,7 +128,10 @@ export function ContactForm() {
             setValue("subject", v as ContactFormData["subject"])
           }
         >
-          <SelectTrigger>
+          <SelectTrigger
+            aria-invalid={!!errors.subject}
+            aria-describedby={errors.subject ? "c-subject-err" : undefined}
+          >
             <SelectValue placeholder="Select a subject" />
           </SelectTrigger>
           <SelectContent>
@@ -125,7 +143,9 @@ export function ContactForm() {
           </SelectContent>
         </Select>
         {errors.subject && (
-          <p className="text-xs text-red-500">{errors.subject.message}</p>
+          <p id="c-subject-err" role="alert" className="text-xs text-red-500">
+            {errors.subject.message}
+          </p>
         )}
       </div>
 
@@ -135,18 +155,48 @@ export function ContactForm() {
           id="c-message"
           {...register("message")}
           rows={5}
+          maxLength={MESSAGE_MAX}
           placeholder="How can we help?"
           className="resize-none"
+          aria-invalid={!!errors.message}
+          aria-describedby={
+            [
+              errors.message ? "c-message-err" : "",
+              "c-message-count",
+            ]
+              .filter(Boolean)
+              .join(" ") || undefined
+          }
         />
-        {errors.message && (
-          <p className="text-xs text-red-500">{errors.message.message}</p>
-        )}
+        <div className="flex items-start justify-between gap-2">
+          {errors.message ? (
+            <p id="c-message-err" role="alert" className="text-xs text-red-500">
+              {errors.message.message}
+            </p>
+          ) : (
+            <span />
+          )}
+          <p
+            id="c-message-count"
+            className={`shrink-0 text-xs ${
+              messageValue.length > MESSAGE_MAX * 0.9
+                ? "text-red-500"
+                : "text-muted-foreground"
+            }`}
+          >
+            {messageValue.length}/{MESSAGE_MAX}
+          </p>
+        </div>
       </div>
 
       {error && (
-        <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-600">
-          {error}
-        </p>
+        <div
+          role="alert"
+          className="flex items-start gap-2 rounded-md bg-red-50 px-3 py-2 text-sm text-red-600"
+        >
+          <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+          <span>{error}</span>
+        </div>
       )}
 
       <Button

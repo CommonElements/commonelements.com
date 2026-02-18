@@ -21,9 +21,9 @@ export function Hero() {
             </span>
           </h1>
           <p className="mt-6 text-base leading-relaxed text-white/80 md:text-lg">
-            Common Elements is a specialty insurance agency for HOAs,
-            condominiums, and cooperatives across the Gulf Coast. Founded by
-            community association professionals who spent years on the other
+            Common Elements is building a specialty insurance practice for
+            HOAs, condominiums, and cooperatives across the Gulf Coast. Founded
+            by community association professionals who spent years on the other
             side of the table &mdash; watching boards get blindsided by coverage
             gaps, disappearing agents, and renewals nobody could explain.
           </p>

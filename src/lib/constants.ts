@@ -34,7 +34,9 @@ export const NAV_ITEMS = [
     ],
   },
   { label: "About", href: "/about" },
+  { label: "Why CEI", href: "/why-cei" },
   { label: "Resources", href: "/resources" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
@@ -43,8 +45,8 @@ export const NAV_ITEMS = [
 /* ------------------------------------------------------------------ */
 
 export const CREDENTIALS = [
-  "Licensed in FL, GA, AL, MS & LA",
-  "FL 2-20 General Lines",
+  "FL 2-20 General Lines Licensed",
+  "Gulf Coast Markets",
   "LCAM CAM58884",
   "CAI Member",
 ] as const;
@@ -89,7 +91,7 @@ export const DIFFERENTIATORS = [
     icon: Focus,
     title: "Association-Only Focus",
     description:
-      "We don\u2019t sell auto insurance. We don\u2019t sell homeowners policies. Every client is a community association. Every carrier relationship, every coverage analysis, every renewal strategy is built around how associations actually work.",
+      "We won\u2019t sell auto insurance. We won\u2019t sell homeowners policies. Every client will be a community association. Every carrier relationship, every coverage analysis, every renewal strategy will be built around how associations actually work.",
   },
   {
     icon: GraduationCap,
@@ -101,13 +103,13 @@ export const DIFFERENTIATORS = [
     icon: MapPin,
     title: "Gulf Coast Specialist",
     description:
-      "Florida. Georgia. Alabama. Mississippi. Louisiana. Coastal property insurance is a different animal \u2014 surplus lines markets, wind mitigation credits, flood zone classifications, named storm deductibles. We operate exclusively where this complexity lives.",
+      "Florida. Georgia. Alabama. Mississippi. Louisiana. Coastal property insurance is a different animal \u2014 surplus lines markets, wind mitigation credits, flood zone classifications, named storm deductibles. We will operate exclusively where this complexity lives.",
   },
   {
     icon: Eye,
     title: "Transparency as Standard",
     description:
-      "When we present your renewal, you\u2019ll see what changed, why, and what alternatives we explored. Side-by-side comparisons, plain-language summaries, and a direct line to someone who picks up the phone. That\u2019s not a premium service \u2014 that\u2019s the baseline.",
+      "When we present your renewal, you\u2019ll see what changed, why, and what alternatives we explored. Side-by-side comparisons, plain-language summaries, and a direct line to someone who picks up the phone. That won\u2019t be a premium service \u2014 it\u2019ll be the baseline.",
   },
 ] as const;
 
@@ -169,19 +171,19 @@ export const HOW_IT_WORKS_STEPS = [
     number: 1,
     title: "Tell us about your community.",
     description:
-      "A short intake form with the basics: association type, unit count, location, and what\u2019s driving you to look. No jargon, no 40-field application.",
+      "When we launch, you\u2019ll fill out a short intake form with the basics: association type, unit count, location, and what\u2019s driving you to look. No jargon, no 40-field application.",
   },
   {
     number: 2,
-    title: "We do the work.",
+    title: "We\u2019ll do the work.",
     description:
-      "We review your current program, analyze your governing document requirements, and go to market across admitted and surplus lines carriers to find competitive options.",
+      "We\u2019ll review your current program, analyze your governing document requirements, and go to market across admitted and surplus lines carriers to find competitive options.",
   },
   {
     number: 3,
     title: "Your board decides with clarity.",
     description:
-      "We present side-by-side comparisons in plain language \u2014 coverage differences, premium breakdowns, deductible structures \u2014 so your board can make an informed vote.",
+      "We\u2019ll present side-by-side comparisons in plain language \u2014 coverage differences, premium breakdowns, deductible structures \u2014 so your board can make an informed vote.",
   },
 ] as const;
 
@@ -246,7 +248,7 @@ export const GULF_COAST_STATES = [
 /* ------------------------------------------------------------------ */
 
 export const FOOTER_DISCLAIMER =
-  "Common Elements is currently in pre-launch. We are not yet a registered insurance agency and are not currently soliciting or transacting insurance business. Content on this website is provided for informational purposes only and does not constitute insurance advice. Insurance coverage is subject to the terms, conditions, and exclusions of each individual policy. Please consult with a licensed insurance professional regarding your specific coverage needs.";
+  "Common Elements Insurance is in pre-launch development. Harry Schoeller holds a Florida 2-20 General Lines Agent license (LCAM CAM58884). Common Elements is not yet a licensed insurance agency and does not currently have carrier appointments. We are not transacting insurance business \u2014 we cannot bind coverage, issue policies, or collect premiums at this time. The waitlist collects expressions of interest only. Content on this website is educational and does not constitute insurance advice, a quote, or an offer of coverage. Insurance coverage is subject to the terms, conditions, and exclusions of each individual policy. Please consult with a licensed insurance professional for your specific needs.";
 
 export const COMPANY_INFO = {
   name: "Common Elements Insurance",
@@ -258,7 +260,9 @@ export const COMPANY_INFO = {
 
 export const FOOTER_LINKS = [
   { label: "About", href: "/about" },
+  { label: "Why CEI", href: "/why-cei" },
   { label: "Resources", href: "/resources" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy" },
 ] as const;

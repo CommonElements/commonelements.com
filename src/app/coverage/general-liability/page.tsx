@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function GeneralLiabilityPage() {
   return (
-    <CoveragePageLayout title="General Liability Insurance for Community Associations: What Your Board Needs to Know">
+    <CoveragePageLayout slug="general-liability" title="General Liability Insurance for Community Associations: What Your Board Needs to Know">
       <p>
         General liability insurance protects your association against claims
         alleging bodily injury or property damage arising from the ownership,

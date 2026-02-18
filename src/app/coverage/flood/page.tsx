@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function FloodPage() {
   return (
-    <CoveragePageLayout title="Flood Insurance for Community Associations: Why NFIP Alone Isn't Enough">
+    <CoveragePageLayout slug="flood" title="Flood Insurance for Community Associations: Why NFIP Alone Isn't Enough">
       <p>
         For Gulf Coast community associations, flood insurance isn&rsquo;t
         optional &mdash; it&rsquo;s essential. And for many associations, the

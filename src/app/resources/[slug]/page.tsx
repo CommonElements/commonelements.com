@@ -108,7 +108,7 @@ export default async function BlogPostPage({ params }: Props) {
             </p>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               {post.frontmatter.author} is a founding member of Common Elements
-              Insurance, a specialty agency focused on community associations
+              Insurance, a specialty insurance practice focused on community associations
               across the Gulf Coast. The CEI team holds Florida 2-20 General
               Lines licensing and brings Licensed Community Association Manager
               (LCAM) credentials to the table.

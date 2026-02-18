@@ -19,20 +19,20 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Specialty insurance solutions for community associations across the
-              Gulf Coast.
+              Building specialty insurance solutions for community associations
+              across the Gulf Coast.
             </p>
           </div>
 
           {/* Links */}
           <div>
             <h2 className="text-sm font-semibold text-blue">Quick Links</h2>
-            <nav className="mt-3 flex flex-col gap-2">
+            <nav className="mt-3 flex flex-col gap-1">
               {FOOTER_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-muted-foreground transition-colors hover:text-blue"
+                  className="py-1.5 text-sm text-muted-foreground transition-colors hover:text-blue"
                 >
                   {link.label}
                 </Link>

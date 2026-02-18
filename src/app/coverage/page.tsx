@@ -50,13 +50,15 @@ export default function CoverageOverviewPage() {
               <Link
                 key={type.slug}
                 href={`/coverage/${type.slug}`}
-                className="group rounded-lg border bg-white p-6 transition-all hover:border-teal/30 hover:shadow-md"
+                className="group rounded-xl border bg-white p-6 transition-all duration-200 hover:border-teal/30 hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2"
               >
-                <type.icon className="h-8 w-8 text-teal" />
-                <h2 className="mt-4 text-lg font-semibold text-blue group-hover:text-teal">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-teal/10 transition-colors group-hover:bg-teal/15">
+                  <type.icon className="h-5 w-5 text-teal" />
+                </div>
+                <h2 className="text-lg font-semibold text-blue">
                   {type.title}
                 </h2>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted-foreground">
                   {type.shortDescription}
                 </p>
                 <span className="mt-4 inline-flex items-center text-sm font-medium text-teal">

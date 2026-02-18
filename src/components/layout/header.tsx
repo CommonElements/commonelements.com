@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -97,7 +97,7 @@ export function Header() {
                         <Link
                           href={child.href}
                           className={cn(
-                            "rounded-md px-6 py-2 text-sm transition-colors hover:bg-muted",
+                            "rounded-md px-6 py-3 text-sm transition-colors hover:bg-muted",
                             pathname === child.href
                               ? "font-medium text-blue"
                               : "text-muted-foreground"
@@ -114,7 +114,7 @@ export function Header() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted",
+                        "rounded-md px-3 py-3 text-sm font-medium transition-colors hover:bg-muted",
                         pathname === item.href
                           ? "text-blue"
                           : "text-muted-foreground"
@@ -160,15 +160,72 @@ function DesktopDropdown({
   pathname: string;
 }) {
   const [open, setOpen] = useState(false);
+  const [focusedIndex, setFocusedIndex] = useState(-1);
   const isActive = items.some((item) => pathname.startsWith(item.href));
   const closeTimer = React.useRef<ReturnType<typeof setTimeout>>(null);
+  const triggerRef = React.useRef<HTMLButtonElement>(null);
+  const itemRefs = React.useRef<(HTMLAnchorElement | null)[]>([]);
 
   const handleOpen = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setOpen(true);
   };
   const handleClose = () => {
-    closeTimer.current = setTimeout(() => setOpen(false), 150);
+    closeTimer.current = setTimeout(() => {
+      setOpen(false);
+      setFocusedIndex(-1);
+    }, 150);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        if (!open) {
+          setOpen(true);
+          setFocusedIndex(0);
+          requestAnimationFrame(() => itemRefs.current[0]?.focus());
+        } else {
+          const next = Math.min(focusedIndex + 1, items.length - 1);
+          setFocusedIndex(next);
+          itemRefs.current[next]?.focus();
+        }
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        if (open) {
+          if (focusedIndex <= 0) {
+            setFocusedIndex(-1);
+            triggerRef.current?.focus();
+          } else {
+            const prev = focusedIndex - 1;
+            setFocusedIndex(prev);
+            itemRefs.current[prev]?.focus();
+          }
+        }
+        break;
+      case "Escape":
+        e.preventDefault();
+        setOpen(false);
+        setFocusedIndex(-1);
+        triggerRef.current?.focus();
+        break;
+      case "Home":
+        if (open) {
+          e.preventDefault();
+          setFocusedIndex(0);
+          itemRefs.current[0]?.focus();
+        }
+        break;
+      case "End":
+        if (open) {
+          e.preventDefault();
+          const last = items.length - 1;
+          setFocusedIndex(last);
+          itemRefs.current[last]?.focus();
+        }
+        break;
+    }
   };
 
   return (
@@ -176,8 +233,10 @@ function DesktopDropdown({
       className="relative"
       onMouseEnter={handleOpen}
       onMouseLeave={handleClose}
+      onKeyDown={handleKeyDown}
     >
       <button
+        ref={triggerRef}
         aria-expanded={open}
         aria-haspopup="true"
         onFocus={handleOpen}
@@ -197,6 +256,7 @@ function DesktopDropdown({
         />
       </button>
       <div
+        role="menu"
         className={cn(
           "absolute left-0 top-full z-50 pt-2 transition-all",
           open
@@ -205,14 +265,17 @@ function DesktopDropdown({
         )}
       >
         <div className="min-w-[220px] rounded-lg border bg-white p-2 shadow-lg">
-          {items.map((item) => (
+          {items.map((item, i) => (
             <Link
               key={item.href}
               href={item.href}
+              ref={(el) => { itemRefs.current[i] = el; }}
+              role="menuitem"
+              tabIndex={open ? 0 : -1}
               onFocus={handleOpen}
               onBlur={handleClose}
               className={cn(
-                "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-muted",
+                "block rounded-md px-3 py-2 text-sm transition-colors hover:bg-muted focus-visible:bg-muted focus-visible:outline-none",
                 pathname === item.href
                   ? "font-medium text-blue"
                   : "text-muted-foreground hover:text-blue"

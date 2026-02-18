@@ -5,11 +5,14 @@ export function Solution() {
     <section className="bg-cream py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold text-blue md:text-4xl">
+          <p className="text-xs font-semibold uppercase tracking-widest text-teal">
+            Our Approach
+          </p>
+          <h2 className="mt-2 text-3xl font-semibold text-blue md:text-4xl">
             What Common Elements Is Building
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-            We&rsquo;re not trying to be the biggest agency. We&rsquo;re
+            We&rsquo;re not trying to be the biggest practice. We&rsquo;re
             building one that focuses exclusively on community associations
             &mdash; because your master policy, your D&amp;O coverage, and your
             flood program deserve someone who thinks about this full-time.
@@ -29,7 +32,7 @@ export function Solution() {
                 <h3 className="text-lg font-semibold text-blue">
                   {diff.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted-foreground">
                   {diff.description}
                 </p>
               </div>

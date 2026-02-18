@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
@@ -72,7 +73,7 @@ export function WaitlistSection() {
             size="lg"
             className="mt-6 border-white/20 text-white hover:bg-white/10"
           >
-            <a href="/resources">Browse Resources</a>
+            <Link href="/resources">Browse Resources</Link>
           </Button>
         </div>
       </section>
@@ -87,8 +88,8 @@ export function WaitlistSection() {
             Be First in Line
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/75">
-            Common Elements is currently in pre-launch as we finalize our agency
-            registration and carrier partnerships. When we go live, the first
+            Common Elements is currently in pre-launch as we finalize our
+            licensing and carrier partnerships. When we go live, the first
             associations on our list will receive a complimentary coverage review
             &mdash; a full analysis of your current insurance program with gap
             identification and market comparison.
@@ -122,7 +123,7 @@ export function WaitlistSection() {
                 id="wl-name"
                 {...register("name")}
                 placeholder="Jane Smith"
-                className="border-white/20 bg-white/10 text-white placeholder:text-white/40"
+                className="border-white/20 bg-white/10 text-white placeholder:text-white/50"
               />
               {errors.name && (
                 <p className="text-xs text-red-300">{errors.name.message}</p>
@@ -137,7 +138,7 @@ export function WaitlistSection() {
                 type="email"
                 {...register("email")}
                 placeholder="jane@example.com"
-                className="border-white/20 bg-white/10 text-white placeholder:text-white/40"
+                className="border-white/20 bg-white/10 text-white placeholder:text-white/50"
               />
               {errors.email && (
                 <p className="text-xs text-red-300">{errors.email.message}</p>
@@ -197,7 +198,7 @@ export function WaitlistSection() {
               id="wl-association"
               {...register("associationName")}
               placeholder="Sunset Towers HOA"
-              className="border-white/20 bg-white/10 text-white placeholder:text-white/40"
+              className="border-white/20 bg-white/10 text-white placeholder:text-white/50"
             />
           </div>
 
@@ -211,7 +212,7 @@ export function WaitlistSection() {
               {...register("challenge")}
               rows={2}
               placeholder="e.g., Premium increased 40% with no explanation..."
-              className="resize-none border-white/20 bg-white/10 text-white placeholder:text-white/40"
+              className="resize-none border-white/20 bg-white/10 text-white placeholder:text-white/50"
             />
           </div>
 
@@ -234,7 +235,7 @@ export function WaitlistSection() {
               </>
             ) : (
               <>
-                Reserve My Spot
+                Join the Waitlist
                 <ArrowRight className="ml-2 h-4 w-4" />
               </>
             )}

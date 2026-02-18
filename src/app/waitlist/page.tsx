@@ -5,7 +5,7 @@ import { CtaBanner } from "@/components/shared/cta-banner";
 export const metadata: Metadata = {
   title: "Join the Waitlist",
   description:
-    "Reserve your spot for a free coverage review from Common Elements. We'll analyze your association's insurance program — coverage gaps, statutory compliance, and plain-language recommendations.",
+    "Join the Common Elements waitlist. When we launch, waitlist members will be first to receive a complimentary coverage review — coverage gaps, statutory compliance, and plain-language recommendations.",
 };
 
 export default function WaitlistPage() {
@@ -15,13 +15,14 @@ export default function WaitlistPage() {
       <section className="bg-blue py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
-            Reserve Your Spot for a Free Coverage Review
+            Get on the List for Launch Day
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-white/75">
-            Common Elements is a specialty insurance agency focused exclusively
-            on community associations across the Gulf Coast. We&rsquo;re
-            launching soon &mdash; and the first associations on our list will
-            receive a complimentary coverage review.
+            Common Elements is building a specialty insurance practice focused
+            exclusively on community associations across the Gulf Coast.
+            We&rsquo;re launching soon &mdash; and the first associations on
+            our list will be the first to receive a complimentary coverage
+            review.
           </p>
         </div>
       </section>
@@ -32,13 +33,14 @@ export default function WaitlistPage() {
           {/* What you'll get */}
           <div className="mb-10 space-y-4">
             <h2 className="text-xl font-semibold text-blue">
-              What you&rsquo;ll get
+              What waitlist members will receive at launch
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              A complete analysis of your association&rsquo;s current insurance
-              program &mdash; coverage gaps, statutory compliance, market
-              comparison, and plain-language recommendations your board can
-              actually use to make an informed decision.
+              When we launch, waitlist members will be the first to receive a
+              complimentary analysis of their association&rsquo;s current
+              insurance program &mdash; coverage gaps, statutory compliance,
+              market comparison, and plain-language recommendations your board
+              can actually use to make an informed decision.
             </p>
             <p className="font-medium text-blue">
               No cost. No obligation. No high-pressure sales pitch.

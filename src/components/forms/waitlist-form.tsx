@@ -21,7 +21,9 @@ import {
   STATE_OPTIONS,
   RENEWAL_MONTH_OPTIONS,
 } from "@/lib/constants";
-import { ArrowRight, CheckCircle, Loader2 } from "lucide-react";
+import { ArrowRight, CheckCircle, Loader2, AlertCircle } from "lucide-react";
+
+const CHALLENGE_MAX = 500;
 
 export function WaitlistForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -31,10 +33,13 @@ export function WaitlistForm() {
     register,
     handleSubmit,
     setValue,
+    watch,
     formState: { errors, isSubmitting },
   } = useForm<WaitlistFormData>({
     resolver: zodResolver(waitlistSchema),
   });
+
+  const challengeValue = watch("challenge") ?? "";
 
   async function onSubmit(data: WaitlistFormData) {
     setError(null);
@@ -100,9 +105,13 @@ export function WaitlistForm() {
             id="wlp-name"
             {...register("name")}
             placeholder="Jane Smith"
+            aria-invalid={!!errors.name}
+            aria-describedby={errors.name ? "wlp-name-err" : undefined}
           />
           {errors.name && (
-            <p className="text-xs text-red-500">{errors.name.message}</p>
+            <p id="wlp-name-err" role="alert" className="text-xs text-red-500">
+              {errors.name.message}
+            </p>
           )}
         </div>
         <div className="space-y-2">
@@ -112,9 +121,13 @@ export function WaitlistForm() {
             type="email"
             {...register("email")}
             placeholder="jane@example.com"
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? "wlp-email-err" : undefined}
           />
           {errors.email && (
-            <p className="text-xs text-red-500">{errors.email.message}</p>
+            <p id="wlp-email-err" role="alert" className="text-xs text-red-500">
+              {errors.email.message}
+            </p>
           )}
         </div>
       </div>
@@ -127,7 +140,10 @@ export function WaitlistForm() {
               setValue("role", v as WaitlistFormData["role"])
             }
           >
-            <SelectTrigger>
+            <SelectTrigger
+              aria-invalid={!!errors.role}
+              aria-describedby={errors.role ? "wlp-role-err" : undefined}
+            >
               <SelectValue placeholder="Select your role" />
             </SelectTrigger>
             <SelectContent>
@@ -139,7 +155,9 @@ export function WaitlistForm() {
             </SelectContent>
           </Select>
           {errors.role && (
-            <p className="text-xs text-red-500">{errors.role.message}</p>
+            <p id="wlp-role-err" role="alert" className="text-xs text-red-500">
+              {errors.role.message}
+            </p>
           )}
         </div>
         <div className="space-y-2">
@@ -149,7 +167,10 @@ export function WaitlistForm() {
               setValue("state", v as WaitlistFormData["state"])
             }
           >
-            <SelectTrigger>
+            <SelectTrigger
+              aria-invalid={!!errors.state}
+              aria-describedby={errors.state ? "wlp-state-err" : undefined}
+            >
               <SelectValue placeholder="Select state" />
             </SelectTrigger>
             <SelectContent>
@@ -161,7 +182,9 @@ export function WaitlistForm() {
             </SelectContent>
           </Select>
           {errors.state && (
-            <p className="text-xs text-red-500">{errors.state.message}</p>
+            <p id="wlp-state-err" role="alert" className="text-xs text-red-500">
+              {errors.state.message}
+            </p>
           )}
         </div>
       </div>
@@ -219,15 +242,31 @@ export function WaitlistForm() {
           id="wlp-challenge"
           {...register("challenge")}
           rows={3}
+          maxLength={CHALLENGE_MAX}
           placeholder="e.g., Premium increased 40% with no explanation..."
           className="resize-none"
+          aria-describedby="wlp-challenge-count"
         />
+        <p
+          id="wlp-challenge-count"
+          className={`text-right text-xs ${
+            challengeValue.length > CHALLENGE_MAX * 0.9
+              ? "text-red-500"
+              : "text-muted-foreground"
+          }`}
+        >
+          {challengeValue.length}/{CHALLENGE_MAX}
+        </p>
       </div>
 
       {error && (
-        <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-600">
-          {error}
-        </p>
+        <div
+          role="alert"
+          className="flex items-start gap-2 rounded-md bg-red-50 px-3 py-2 text-sm text-red-600"
+        >
+          <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+          <span>{error}</span>
+        </div>
       )}
 
       <Button
@@ -243,7 +282,7 @@ export function WaitlistForm() {
           </>
         ) : (
           <>
-            Reserve My Spot
+            Join the Waitlist
             <ArrowRight className="ml-2 h-4 w-4" />
           </>
         )}

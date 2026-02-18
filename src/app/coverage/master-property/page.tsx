@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function MasterPropertyPage() {
   return (
-    <CoveragePageLayout title="Master Property Insurance: What It Covers, What It Doesn't, and Why Your Board Can't Get This Wrong">
+    <CoveragePageLayout slug="master-property" title="Master Property Insurance: What It Covers, What It Doesn't, and Why Your Board Can't Get This Wrong">
       <p>
         Your association&rsquo;s master property policy is the single most
         expensive line item in your insurance program &mdash; and usually the

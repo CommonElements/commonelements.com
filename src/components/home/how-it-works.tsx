@@ -5,7 +5,10 @@ export function HowItWorks() {
     <section className="bg-cream py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold text-blue md:text-4xl">
+          <p className="text-xs font-semibold uppercase tracking-widest text-teal">
+            How It Works
+          </p>
+          <h2 className="mt-2 text-3xl font-semibold text-blue md:text-4xl">
             Simple. Transparent. Built for Boards.
           </h2>
         </div>
@@ -16,7 +19,7 @@ export function HowItWorks() {
                 {step.number}
               </div>
               <h3 className="text-lg font-semibold text-blue">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-2 text-[0.9375rem] leading-relaxed text-muted-foreground">
                 {step.description}
               </p>
             </div>

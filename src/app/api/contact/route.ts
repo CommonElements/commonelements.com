@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import { contactSchema } from "@/lib/schemas";
 import { getResend, NOTIFICATION_EMAIL, FROM_EMAIL } from "@/lib/resend";
+import {
+  contactAdminEmail,
+  contactConfirmationEmail,
+} from "@/lib/email-templates";
 
 export async function POST(request: Request) {
   try {
@@ -20,16 +24,7 @@ export async function POST(request: Request) {
       to: NOTIFICATION_EMAIL,
       replyTo: data.email,
       subject: `Contact Form: ${data.subject} — ${data.name}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <table style="border-collapse:collapse;width:100%;max-width:500px;">
-          <tr><td style="padding:8px;font-weight:bold;">Name</td><td style="padding:8px;">${data.name}</td></tr>
-          <tr><td style="padding:8px;font-weight:bold;">Email</td><td style="padding:8px;">${data.email}</td></tr>
-          <tr><td style="padding:8px;font-weight:bold;">Subject</td><td style="padding:8px;">${data.subject}</td></tr>
-        </table>
-        <h3 style="margin-top:16px;">Message</h3>
-        <p style="white-space:pre-wrap;">${data.message}</p>
-      `,
+      html: contactAdminEmail(data),
     });
 
     // Send confirmation to user
@@ -37,11 +32,7 @@ export async function POST(request: Request) {
       from: FROM_EMAIL,
       to: data.email,
       subject: "We received your message — Common Elements",
-      html: `
-        <h2>Thanks for reaching out, ${data.name}!</h2>
-        <p>We've received your message and will get back to you within one business day.</p>
-        <p>Best,<br/>The Common Elements Team</p>
-      `,
+      html: contactConfirmationEmail(data.name),
     });
 
     return NextResponse.json({ success: true });

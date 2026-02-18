@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function DirectorsOfficersPage() {
   return (
-    <CoveragePageLayout title="D&O Insurance for Board Members: What's Actually Covered and Why Volunteers Need It">
+    <CoveragePageLayout slug="directors-officers" title="D&O Insurance for Board Members: What's Actually Covered and Why Volunteers Need It">
       <p>
         Serving on a community association board is a volunteer position with
         real legal exposure. Directors and officers insurance protects

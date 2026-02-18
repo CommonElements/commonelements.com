@@ -19,11 +19,11 @@ export function OrganizationJsonLd() {
     <JsonLd
       data={{
         "@context": "https://schema.org",
-        "@type": "InsuranceAgency",
+        "@type": "Organization",
         name: "Common Elements Insurance",
         url: BASE_URL,
         description:
-          "Specialty insurance agency focused exclusively on community associations across the Gulf Coast.",
+          "Building a specialty insurance practice focused exclusively on community associations across the Gulf Coast.",
         areaServed: [
           { "@type": "State", name: "Florida" },
           { "@type": "State", name: "Georgia" },
