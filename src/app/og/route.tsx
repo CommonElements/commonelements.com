@@ -98,23 +98,41 @@ export async function GET(request: NextRequest) {
               gap: "12px",
             }}
           >
-            <div
-              style={{
-                width: "40px",
-                height: "40px",
-                backgroundColor: "#2A9D8F",
-                borderRadius: "8px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "16px",
-                color: "#FFFFFF",
-                fontWeight: 800,
-                letterSpacing: "-0.5px",
-              }}
+            {/* Shield logomark */}
+            <svg
+              viewBox="0 0 40 40"
+              width="40"
+              height="40"
+              style={{ flexShrink: 0 }}
             >
-              CEI
-            </div>
+              <rect width="40" height="40" rx="8" fill="#004FA5" />
+              <path
+                d="M20 6 L33 11.5 L33 22 Q33 31 20 36.5 Q7 31 7 22 L7 11.5 Z"
+                fill="white"
+                opacity="0.12"
+              />
+              <path
+                d="M20 6 L33 11.5 L33 22 Q33 31 20 36.5 Q7 31 7 22 L7 11.5 Z"
+                fill="none"
+                stroke="#FF8A00"
+                strokeWidth="1.2"
+                strokeLinejoin="round"
+                opacity="0.9"
+              />
+              <polygon
+                points="12.5,16 20,12 27.5,16"
+                fill="none"
+                stroke="white"
+                strokeWidth="0.9"
+                strokeLinejoin="round"
+                opacity="0.85"
+              />
+              <rect x="14" y="17" width="2.5" height="9" rx="0.5" fill="white" opacity="0.9" />
+              <rect x="18.75" y="14.5" width="2.5" height="11.5" rx="0.5" fill="white" opacity="0.95" />
+              <rect x="23.5" y="17" width="2.5" height="9" rx="0.5" fill="white" opacity="0.9" />
+              <rect x="13" y="26" width="14" height="0.8" rx="0.3" fill="white" opacity="0.7" />
+              <polygon points="20,10.5 21,12 20,13.5 19,12" fill="#FF8A00" opacity="0.9" />
+            </svg>
             <div style={{ fontSize: 20, color: "#FAFAF8", fontWeight: 600 }}>
               Common Elements
             </div>

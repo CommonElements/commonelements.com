@@ -32,11 +32,12 @@ function layout(body: string): string {
             <td align="center" style="padding-bottom:24px;">
               <table role="presentation" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td style="background-color:${BLUE};border-radius:6px;padding:6px 10px;">
-                    <span style="color:${ORANGE};font-size:12px;font-weight:700;letter-spacing:0.5px;">CEI</span>
+                  <td style="background-color:${BLUE};border-radius:8px;width:36px;height:36px;text-align:center;vertical-align:middle;">
+                    <span style="color:${WHITE};font-size:11px;font-weight:800;letter-spacing:0.5px;line-height:36px;font-family:Georgia,'Times New Roman',serif;">CE</span>
                   </td>
                   <td style="padding-left:10px;">
-                    <span style="color:${BLUE};font-size:16px;font-weight:600;">Common Elements</span>
+                    <span style="color:${BLUE};font-size:17px;font-weight:700;letter-spacing:-0.3px;">Common Elements</span><br/>
+                    <span style="color:${ORANGE};font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;">Insurance</span>
                   </td>
                 </tr>
               </table>

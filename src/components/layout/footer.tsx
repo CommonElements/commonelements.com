@@ -2,6 +2,7 @@ import Link from "next/link";
 import { COMPANY_INFO, FOOTER_LINKS } from "@/lib/constants";
 import { Disclaimer } from "@/components/shared/disclaimer";
 import { Separator } from "@/components/ui/separator";
+import { LogoMark } from "@/components/shared/logo";
 
 export function Footer() {
   return (
@@ -11,9 +12,7 @@ export function Footer() {
           {/* Company */}
           <div>
             <div className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-md bg-blue">
-                <span className="text-xs font-bold text-orange">CEI</span>
-              </div>
+              <LogoMark />
               <span className="text-lg font-semibold text-blue">
                 Common Elements
               </span>

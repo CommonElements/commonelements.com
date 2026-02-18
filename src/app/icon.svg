@@ -4,10 +4,54 @@
       <stop offset="0%" style="stop-color:#0063CE"/>
       <stop offset="100%" style="stop-color:#004FA5"/>
     </linearGradient>
+    <linearGradient id="shield-fill" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8A00"/>
+      <stop offset="100%" style="stop-color:#E67A00"/>
+    </linearGradient>
   </defs>
+
+  <!-- Rounded square background -->
   <rect width="512" height="512" rx="96" fill="url(#bg)"/>
-  <!-- Shield outline -->
-  <path d="M256 80 L400 140 L400 280 Q400 380 256 440 Q112 380 112 280 L112 140 Z" fill="none" stroke="#FF8A00" stroke-width="12" opacity="0.3"/>
-  <!-- CEI text -->
-  <text x="256" y="300" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-weight="800" font-size="180" fill="#FFFFFF" letter-spacing="-4">CEI</text>
+
+  <!-- Shield shape — filled with a subtle white for contrast -->
+  <path
+    d="M256 68 L408 138 L408 278 Q408 388 256 452 Q104 388 104 278 L104 138 Z"
+    fill="white"
+    opacity="0.12"
+  />
+
+  <!-- Shield outline — orange accent -->
+  <path
+    d="M256 68 L408 138 L408 278 Q408 388 256 452 Q104 388 104 278 L104 138 Z"
+    fill="none"
+    stroke="#FF8A00"
+    stroke-width="8"
+    stroke-linejoin="round"
+    opacity="0.9"
+  />
+
+  <!-- Three building columns — representing "common elements" -->
+  <!-- Left column -->
+  <rect x="176" y="210" width="32" height="130" rx="4" fill="white" opacity="0.9"/>
+  <rect x="172" y="198" width="40" height="16" rx="3" fill="white" opacity="0.9"/>
+  <rect x="172" y="336" width="40" height="12" rx="2" fill="white" opacity="0.9"/>
+
+  <!-- Center column (taller) -->
+  <rect x="240" y="180" width="32" height="160" rx="4" fill="white" opacity="0.95"/>
+  <rect x="236" y="168" width="40" height="16" rx="3" fill="white" opacity="0.95"/>
+  <rect x="236" y="336" width="40" height="12" rx="2" fill="white" opacity="0.95"/>
+
+  <!-- Right column -->
+  <rect x="304" y="210" width="32" height="130" rx="4" fill="white" opacity="0.9"/>
+  <rect x="300" y="198" width="40" height="16" rx="3" fill="white" opacity="0.9"/>
+  <rect x="300" y="336" width="40" height="12" rx="2" fill="white" opacity="0.9"/>
+
+  <!-- Pediment / roof triangle connecting columns -->
+  <polygon points="164,196 256,148 348,196" fill="none" stroke="white" stroke-width="6" stroke-linejoin="round" opacity="0.85"/>
+
+  <!-- Base connecting columns -->
+  <rect x="168" y="348" width="176" height="8" rx="2" fill="white" opacity="0.7"/>
+
+  <!-- Small orange diamond accent at peak -->
+  <polygon points="256,136 264,148 256,160 248,148" fill="#FF8A00" opacity="0.9"/>
 </svg>
