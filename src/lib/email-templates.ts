@@ -32,8 +32,27 @@ function layout(body: string): string {
             <td align="center" style="padding-bottom:24px;">
               <table role="presentation" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td style="background-color:${BLUE};border-radius:8px;width:36px;height:36px;text-align:center;vertical-align:middle;">
-                    <span style="color:${WHITE};font-size:11px;font-weight:800;letter-spacing:0.5px;line-height:36px;font-family:Georgia,'Times New Roman',serif;">CE</span>
+                  <td style="background-color:${BLUE};border-radius:8px;width:36px;height:36px;vertical-align:middle;padding:0;">
+                    <!--[if mso]><table role="presentation" cellpadding="0" cellspacing="0" width="36" align="center"><tr><![endif]-->
+                    <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;border-collapse:collapse;" width="36" height="36">
+                      <tr>
+                        <td style="padding:6px 4px 0 6px;vertical-align:bottom;" width="8" height="30">
+                          <div style="width:7px;height:11px;background-color:${WHITE};opacity:0.35;border-radius:1px;"></div>
+                        </td>
+                        <td style="padding:6px 0 0 0;vertical-align:bottom;" width="8" height="30">
+                          <div style="width:7px;height:17px;background-color:${WHITE};opacity:0.6;border-radius:1px;"></div>
+                        </td>
+                        <td style="padding:6px 6px 0 0;vertical-align:bottom;" width="8" height="30">
+                          <div style="width:7px;height:23px;background-color:${WHITE};opacity:0.95;border-radius:1px;"></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" style="padding:1px 5px 5px 5px;">
+                          <div style="width:100%;height:2px;background-color:${ORANGE};border-radius:1px;"></div>
+                        </td>
+                      </tr>
+                    </table>
+                    <!--[if mso]></tr></table><![endif]-->
                   </td>
                   <td style="padding-left:10px;">
                     <span style="color:${BLUE};font-size:17px;font-weight:700;letter-spacing:-0.3px;">Common Elements</span><br/>

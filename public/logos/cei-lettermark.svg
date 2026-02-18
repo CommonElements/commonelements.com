@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" width="300" height="120">
+  <defs>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF8A00" />
+      <stop offset="100%" style="stop-color:#FFA133" />
+    </linearGradient>
+  </defs>
+  <text x="15" y="82" font-family="'Georgia', 'Times New Roman', serif" font-size="80" font-weight="700" letter-spacing="8" fill="#0063CE">CEI</text>
+  <rect x="15" y="92" width="260" height="3" rx="1.5" fill="url(#accent)"/>
+  <text x="15" y="112" font-family="'Arial', 'Helvetica', sans-serif" font-size="10" font-weight="400" letter-spacing="4" fill="#E67A00">COMMON ELEMENTS INSURANCE</text>
+</svg>
